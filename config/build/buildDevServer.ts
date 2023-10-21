@@ -2,11 +2,14 @@ import { BuildOptions } from './types/config'
 import { Configuration as DevServerConfiguration } from 'webpack-dev-server'
 
 export const buildDevServer = (
-  optios: BuildOptions
+  options: BuildOptions,
 ): DevServerConfiguration => {
-  const { port } = optios
+  const { port } = options
 
   return {
+    client: {
+      overlay: false,
+    },
     port: port,
     open: true,
     historyApiFallback: true,

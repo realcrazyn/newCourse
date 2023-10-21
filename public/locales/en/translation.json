@@ -1,5 +1,9 @@
 {
   "lang": "Language",
   "about_nav": "About page",
-  "main_nav": "Main page"
+  "main_nav": "Main page",
+  "not_found_page": "Page not found",
+  "react_error": "Something went wrong. ",
+  "reload_page": "Reload page",
+  "throw_error": "Test error"
 }
