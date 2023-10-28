@@ -6,5 +6,6 @@
   "react_error": "Something went wrong. ",
   "reload_page": "Reload page",
   "throw_error": "Test error",
-  "lang_short": "En"
+  "lang_short": "En",
+  "login": "Enter"
 }
