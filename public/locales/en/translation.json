@@ -7,5 +7,7 @@
   "reload_page": "Reload page",
   "throw_error": "Test error",
   "lang_short": "En",
-  "login": "Enter"
+  "login": "Enter",
+  "log_password": "Enter password\n",
+  "log_username": "Enter login"
 }
