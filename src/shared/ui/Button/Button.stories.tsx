@@ -53,6 +53,12 @@ Backgound.args = {
   children: 'Backgound',
   theme: ButtonTheme.BACKGROUND,
 }
+export const Disabled = Template.bind({})
+Disabled.args = {
+  children: 'Disabled',
+  theme: ButtonTheme.OUTLINE,
+  disabled: true,
+}
 
 export const BackgoundDark = Template.bind({})
 BackgoundDark.args = {

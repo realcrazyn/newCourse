@@ -9,5 +9,8 @@
   "lang_short": "En",
   "login": "Enter",
   "log_password": "Enter password\n",
-  "log_username": "Enter login"
+  "log_username": "Enter login",
+  "login-title": "Login form",
+  "login_error": "Wrong login or password",
+  "logoff": "Log off"
 }

@@ -9,5 +9,8 @@
   "lang_short": "Ru",
   "login": "Войти",
   "log_username": "Введите логин",
-  "log_password": "Введите пароль"
+  "log_password": "Введите пароль",
+  "login-title": "Форма авторизации",
+  "login_error": "Вы ввели неверный логин или пароль",
+  "logoff": "Выйти"
 }

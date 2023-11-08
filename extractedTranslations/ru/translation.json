@@ -1,0 +1,16 @@
+{
+  "about": "about",
+  "about_nav": "about_nav",
+  "log_password": "log_password",
+  "log_username": "log_username",
+  "login": "login",
+  "login-title": "login-title",
+  "login_error": "login_error",
+  "logoff": "logoff",
+  "main": "main",
+  "main_nav": "main_nav",
+  "not_found_page": "not_found_page",
+  "react_error": "react_error",
+  "reload_page": "reload_page",
+  "throw_error": "throw_error"
+}
