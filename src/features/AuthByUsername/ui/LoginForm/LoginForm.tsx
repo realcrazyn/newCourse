@@ -16,6 +16,7 @@ import {
   DynamicModuleLoader,
   ReducersList,
 } from 'shared/lib/components/DunamicModuleLoader/DynamicModuleLoader'
+import { Loader } from 'shared/ui/Loader/Loader'
 export interface LoginFormProps {
   className?: string
 }
@@ -51,6 +52,7 @@ const LoginForm = memo(({ className }: LoginFormProps) => {
     <DynamicModuleLoader reducers={initialReducers}>
       <div className={classNames(cls.LoginForm, {}, [className])}>
         <Text title={t('login-title')} />
+        {isLoading && <Loader />}
         {error && <Text text={t('login_error')} theme={TextTheme.ERROR} />}
 
         <Input
