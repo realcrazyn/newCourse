@@ -5,7 +5,7 @@ import { Input } from 'shared/ui/Input/Input'
 import { useDispatch, useSelector } from 'react-redux'
 import { memo, useCallback } from 'react'
 import { Text, TextTheme } from 'shared/ui/Text/Text'
-import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername'
+
 import { loginActions, loginReducer } from '../../model/slice/loginSlice'
 import cls from './LoginForm.module.scss'
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError'
@@ -17,6 +17,7 @@ import {
   ReducersList,
 } from 'shared/lib/components/DunamicModuleLoader/DynamicModuleLoader'
 import { Loader } from 'shared/ui/Loader/Loader'
+import { loginByUsername } from 'features/AuthByUsername/model/services/loginByUsername/loginByUsername'
 export interface LoginFormProps {
   className?: string
 }
