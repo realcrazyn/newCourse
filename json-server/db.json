@@ -8,5 +8,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode", "name2": "typicode2", "name3": "typicode3" }
+  "profile": {
+    "first": "Alex",
+    "lastname": "Vish",
+    "age": 29,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Moscow",
+    "username": "admin",
+    "avatar": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F019%2F896%2F008%2Foriginal%2Fmale-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png&tbnid=FhhL4lJI7ubgVM&vet=12ahUKEwjj9pDmtsaCAxVQFBAIHQoRA_MQMygLegQIARBe..i&imgrefurl=https%3A%2F%2Fwww.vecteezy.com%2Fpng%2F19896008-male-user-avatar-icon-in-flat-design-style-person-signs-illustration&docid=ZUMNIB75tyPAuM&w=1920&h=1920&q=user&ved=2ahUKEwjj9pDmtsaCAxVQFBAIHQoRA_MQMygLegQIARBe"
+  }
 }

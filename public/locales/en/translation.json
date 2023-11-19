@@ -12,5 +12,6 @@
   "log_username": "Enter login",
   "login-title": "Login form",
   "login_error": "Wrong login or password",
-  "logoff": "Log off"
+  "logoff": "Log off",
+  "profile_page": "Profile page"
 }

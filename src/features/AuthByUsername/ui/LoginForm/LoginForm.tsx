@@ -2,7 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { Input } from 'shared/ui/Input/Input'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { memo, useCallback } from 'react'
 import { Text, TextTheme } from 'shared/ui/Text/Text'
 
@@ -18,20 +18,22 @@ import {
 } from 'shared/lib/components/DunamicModuleLoader/DynamicModuleLoader'
 import { Loader } from 'shared/ui/Loader/Loader'
 import { loginByUsername } from 'features/AuthByUsername/model/services/loginByUsername/loginByUsername'
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 export interface LoginFormProps {
   className?: string
+  onSucess: () => void
 }
 
 const initialReducers: ReducersList = { loginForm: loginReducer }
 
-const LoginForm = memo(({ className }: LoginFormProps) => {
+const LoginForm = memo(({ className, onSucess }: LoginFormProps) => {
   const { t } = useTranslation()
   const error = useSelector(getLoginError)
   const password = useSelector(getLoginPassowrd)
   const isLoading = useSelector(getLoginLoading)
   const username = useSelector(getLoginUsername)
 
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   const onChangeUsername = useCallback(
     (value: string) => {
@@ -45,9 +47,14 @@ const LoginForm = memo(({ className }: LoginFormProps) => {
     },
     [dispatch],
   )
-  const onLoginClick = useCallback(() => {
-    dispatch(loginByUsername({ password: password, username: username }))
-  }, [dispatch, password, username])
+  const onLoginClick = useCallback(async () => {
+    const result = await dispatch(
+      loginByUsername({ password: password, username: username }),
+    )
+    if (result.meta.requestStatus === 'fulfilled') {
+      onSucess()
+    }
+  }, [onSucess, dispatch, password, username])
 
   return (
     <DynamicModuleLoader reducers={initialReducers}>

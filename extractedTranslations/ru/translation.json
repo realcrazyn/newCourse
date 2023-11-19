@@ -10,6 +10,7 @@
   "main": "main",
   "main_nav": "main_nav",
   "not_found_page": "not_found_page",
+  "profile_page": "profile_page",
   "react_error": "react_error",
   "reload_page": "reload_page",
   "throw_error": "throw_error"
