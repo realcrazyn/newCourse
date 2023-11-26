@@ -13,5 +13,9 @@
   "login-title": "Login form",
   "login_error": "Wrong login or password",
   "logoff": "Log off",
-  "profile_page": "Profile page"
+  "profile_page": "Profile page",
+  "profile_title": "Profile ",
+  "profile_edit": "Edit",
+  "profile_input_name": "Your name",
+  "profile_input_lastname": "Your lastname"
 }

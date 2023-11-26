@@ -13,5 +13,9 @@
   "login-title": "Форма авторизации",
   "login_error": "Вы ввели неверный логин или пароль",
   "logoff": "Выйти",
-  "profile_page": "Страница профиля"
+  "profile_page": "Страница профиля",
+  "profile_title": "Профиль",
+  "profile_edit": "Редактировать",
+  "profile_input_name": "Ваше имя",
+  "profile_input_lastname": "Ваша фамилия"
 }

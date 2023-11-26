@@ -43,7 +43,7 @@ export const Input = memo((props: InputProps) => {
   }
   const onFocus = () => {
     setIsFocused(true)
-    ref.current.focus()
+    ref.current?.focus()
   }
   const onSelect = (e: any) => {
     setCaretPosition(e?.target?.selectionStart || 0)
