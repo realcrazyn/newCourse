@@ -17,5 +17,13 @@
   "profile_title": "Profile ",
   "profile_edit": "Edit",
   "profile_input_name": "Your name",
-  "profile_input_lastname": "Your lastname"
+  "profile_input_lastname": "Your lastname",
+  "proifle_error": "Error while load",
+  "proifle_reload": "Reload page",
+  "profile_edit_cancel": "Cancel",
+  "profile_edit_save": "Save",
+  "profile_input_age": "Your age",
+  "profile_input_city": "Your city",
+  "profile_input_username": "Username",
+  "profile_input_avatar": "Avatar"
 }

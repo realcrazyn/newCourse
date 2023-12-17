@@ -17,5 +17,13 @@
   "profile_title": "Профиль",
   "profile_edit": "Редактировать",
   "profile_input_name": "Ваше имя",
-  "profile_input_lastname": "Ваша фамилия"
+  "profile_input_lastname": "Ваша фамилия",
+  "proifle_error": "Произошла ошибка при подгрузке профиля",
+  "proifle_reload": "Обновите страницу",
+  "profile_edit_cancel": "Отмена",
+  "profile_edit_save": "Сохранить",
+  "profile_input_age": "Ваш возраст",
+  "profile_input_city": "Ваш город",
+  "profile_input_username": "Имя пользователя",
+  "profile_input_avatar": "Аватар"
 }

@@ -1,6 +1,18 @@
 {
-  "posts": [{ "id": 1, "title": "json-server", "author": "typicode" }],
-  "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
   "users": [
     {
       "id": 1,
@@ -9,13 +21,13 @@
     }
   ],
   "profile": {
-    "first": "Alex",
+    "first": "Alex11",
     "lastname": "Vish",
     "age": 29,
-    "currency": "RUB",
+    "currency": "USD",
     "country": "Russia",
     "city": "Moscow",
-    "username": "admin",
-    "avatar": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F019%2F896%2F008%2Foriginal%2Fmale-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png&tbnid=FhhL4lJI7ubgVM&vet=12ahUKEwjj9pDmtsaCAxVQFBAIHQoRA_MQMygLegQIARBe..i&imgrefurl=https%3A%2F%2Fwww.vecteezy.com%2Fpng%2F19896008-male-user-avatar-icon-in-flat-design-style-person-signs-illustration&docid=ZUMNIB75tyPAuM&w=1920&h=1920&q=user&ved=2ahUKEwjj9pDmtsaCAxVQFBAIHQoRA_MQMygLegQIARBe"
+    "username": "admin1",
+    "avatar": "https://avatars.mds.yandex.net/i?id=3e54935a746b9607d363f1440785d04d7dab9394-7664914-images-thumbs&n=13"
   }
 }
