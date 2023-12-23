@@ -7,6 +7,7 @@ import {
   getProfileForm,
   getProfileLoading,
   getProfileReadonly,
+  getProfileValidateError,
   profileActions,
   profileReducer,
 } from 'entities/Profile'
@@ -20,6 +21,8 @@ import {
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader'
 import { Currency } from 'entities/Currency'
 import { Country } from 'entities/Country'
+import { Text, TextTheme } from 'shared/ui/Text/Text'
+import { ValidateProfileError } from 'entities/Profile/model/types/profile'
 
 const reducers: ReducersList = {
   profile: profileReducer,
@@ -36,6 +39,15 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
   const error = useSelector(getProfileError)
   const loading = useSelector(getProfileLoading)
   const readonly = useSelector(getProfileReadonly)
+  const validateErrors = useSelector(getProfileValidateError)
+
+  const validateErrorTranslate = {
+    [ValidateProfileError.SERVER_ERROR]: 'Ошибка сервера',
+    [ValidateProfileError.INCORRECT_AGE]: 'Некорректно указан возраст',
+    [ValidateProfileError.INCORRECT_COUNTRY]: 'Неправильно задана страна',
+    [ValidateProfileError.INCORRECT_USER_DATA]: 'Неправильные данные',
+    [ValidateProfileError.NO_DATA]: 'Нет данных',
+  }
 
   const dispatch = useAppDispatch()
 
@@ -93,7 +105,9 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
   )
 
   useEffect(() => {
-    dispatch(fetchProfileData())
+    if (__PROJECT__ !== 'storybook') {
+      dispatch(fetchProfileData())
+    }
   }, [dispatch])
 
   return (
@@ -101,6 +115,14 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
       <div>
         {' '}
         <ProfilePageHeader />
+        {validateErrors?.length &&
+          validateErrors.map((err) => (
+            <Text
+              key={err}
+              theme={TextTheme.ERROR}
+              text={validateErrorTranslate[err]}
+            />
+          ))}
         <ProfileCard
           readonly={readonly}
           onChangeLastname={onChangeLastname}
