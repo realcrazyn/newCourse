@@ -3,4 +3,24 @@
   "i18n-ally.sourceLanguage": "ru",
   "i18n-ally.keystyle": "flat",
   "i18n-ally.extract.keyMaxLength": 120
+  // "folderTemplates.structures": [
+  //   {
+  //     "name": "My Custom Template",
+  //     // "omitParentDirectory": true,
+  //     "structure": [
+  //       {
+  //         "fileName": "<FTName>.tsx",
+  //         "template": "T"
+  //       },
+  //       {
+  //         "fileName": "<FTName>.module.scss",
+  //         "template": "T.module.scss"
+  //       },
+  //       {
+  //         "fileName": "<FTName>.stories.tsx",
+  //         "template": "T.stories.tsx"
+  //       }
+  //     ]
+  //   }
+  // ]
 }
