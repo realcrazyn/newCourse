@@ -1,4 +1,3 @@
-import { useAppDispatch } from 'app/providers/StoreProvider/config/store'
 import {
   ProfileCard,
   fetchProfileData,
@@ -23,6 +22,7 @@ import { Currency } from 'entities/Currency'
 import { Country } from 'entities/Country'
 import { Text, TextTheme } from 'shared/ui/Text/Text'
 import { ValidateProfileError } from 'entities/Profile/model/types/profile'
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 
 const reducers: ReducersList = {
   profile: profileReducer,

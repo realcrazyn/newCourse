@@ -1,6 +1,7 @@
 {
   "about": "about",
   "about_nav": "about_nav",
+  "article_download_err": "article_download_err",
   "log_password": "log_password",
   "log_username": "log_username",
   "login": "login",
@@ -9,6 +10,7 @@
   "logoff": "logoff",
   "main": "main",
   "main_nav": "main_nav",
+  "no_article": "no_article",
   "not_found_page": "not_found_page",
   "profile_edit": "profile_edit",
   "profile_edit_cancel": "profile_edit_cancel",

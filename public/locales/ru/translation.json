@@ -25,5 +25,6 @@
   "profile_input_age": "Ваш возраст",
   "profile_input_city": "Ваш город",
   "profile_input_username": "Имя пользователя",
-  "profile_input_avatar": "Аватар"
+  "profile_input_avatar": "Аватар",
+  "article_download_err": "Произошла ошибка при загрузке статьи\n"
 }

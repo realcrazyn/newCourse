@@ -1,4 +1,6 @@
 {
   "main": "Главная страница",
-  "login-title": "\n"
+  "login-title": "\n",
+  "no_article": "Статья не найдена",
+  "article_download_err": "Произошла ошибка при загрузке статьи"
 }

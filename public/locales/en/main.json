@@ -1,3 +1,5 @@
 {
-  "main": "Main page"
+  "main": "Main page",
+  "no_article": "Article not found",
+  "article_download_err": "There was an error loading the article"
 }

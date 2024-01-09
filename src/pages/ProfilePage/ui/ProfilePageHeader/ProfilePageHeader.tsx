@@ -10,7 +10,7 @@ import {
   upadateProfileData,
 } from 'entities/Profile'
 import { useCallback } from 'react'
-import { useAppDispatch } from 'app/providers/StoreProvider/config/store'
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 
 interface ProfilePageHeaderProps {
   className?: string
