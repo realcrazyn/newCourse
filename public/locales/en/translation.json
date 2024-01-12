@@ -26,5 +26,7 @@
   "profile_input_city": "Your city",
   "profile_input_username": "Username",
   "profile_input_avatar": "Avatar",
-  "article_download_err": "There was an error loading the article "
+  "article_download_err": "There was an error loading the article ",
+  "comments": "Comment\n",
+  "no_comments": "No comments yet"
 }

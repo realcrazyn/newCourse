@@ -26,5 +26,7 @@
   "profile_input_city": "Ваш город",
   "profile_input_username": "Имя пользователя",
   "profile_input_avatar": "Аватар",
-  "article_download_err": "Произошла ошибка при загрузке статьи\n"
+  "article_download_err": "Произошла ошибка при загрузке статьи\n",
+  "comments": "Комментарии",
+  "no_comments": "Комментарии отсутствуют"
 }
