@@ -1,7 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
 import cls from './ArticleDetailPage.module.scss'
-import { memo } from 'react'
+import { memo, useCallback } from 'react'
 import { ArticleDetails } from 'entities/Article'
 import { useParams } from 'react-router-dom'
 import { Text } from 'shared/ui/Text/Text'
@@ -21,6 +21,8 @@ import {
 } from '../../model/selectors/comments/comments'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
+import { AddCommentForm } from 'features/addNewComment'
+import { addCommentForArticles } from '../../model/services/addCommentForArticles/addCommentForArticles'
 
 interface ArticleDetailPageProps {
   className?: string
@@ -30,7 +32,7 @@ const reducers: ReducersList = {
   atrticeDetailsComments: ArticleDetailsCommentsReducer,
 }
 
-export const ArticleDetailPage = (props: ArticleDetailPageProps) => {
+const ArticleDetailPage = (props: ArticleDetailPageProps) => {
   const { t } = useTranslation()
   const { className } = props
   const dispatch = useDispatch()
@@ -38,6 +40,13 @@ export const ArticleDetailPage = (props: ArticleDetailPageProps) => {
   const comments = useSelector(getArticleComments.selectAll)
   const isLoading = useSelector(getArticleCommentsIsLoading)
   const error = useSelector(getArticleCommentsError)
+
+  const onSendComment = useCallback(
+    (value: string) => {
+      dispatch(addCommentForArticles(value))
+    },
+    [dispatch],
+  )
 
   if (!id) {
     return (
@@ -56,6 +65,7 @@ export const ArticleDetailPage = (props: ArticleDetailPageProps) => {
       <div className={classNames(cls.ArticleDetailPage, {}, [className])}>
         <ArticleDetails id={id} />
         <Text className={cls.commentTitle} title={t('comments')} />
+        <AddCommentForm onSendComment={onSendComment} />
         <CommentList isLoading={isLoading} comments={comments} />
       </div>
     </DynamicModuleLoader>

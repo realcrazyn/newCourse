@@ -14,6 +14,7 @@ import { AxiosInstance } from 'axios'
 import { NavigateOptions, To } from 'react-router-dom'
 import { ArticleDetailsSchema } from 'entities/Article'
 import { ArticleDetailCommentSchema } from 'pages/ArticleDetailPage'
+import { AddCommentFormSchema } from 'features/addNewComment'
 
 export interface StateSchema {
   counter: CounterSchema
@@ -22,6 +23,7 @@ export interface StateSchema {
   profile?: ProfileSchema
   articleDetails?: ArticleDetailsSchema
   atrticeDetailsComments?: ArticleDetailCommentSchema
+  addCommentForm?: AddCommentFormSchema
 }
 
 export type StateSchemaKey = keyof StateSchema

@@ -21,6 +21,7 @@ describe('upadateProfileData.test', () => {
     first: 'Alex',
     lastname: 'Vish',
     age: 29,
+
     currency: Currency.USD,
     country: Country.Russia,
     city: 'Moscow',

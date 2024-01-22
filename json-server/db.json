@@ -6,7 +6,6 @@
       "author": "typicode"
     }
   ],
-
   "articles": [
     {
       "id": "1",
@@ -15,7 +14,9 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "12.12.2023",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -78,7 +79,6 @@
       ]
     }
   ],
-
   "comments": [
     {
       "id": "1",
@@ -97,6 +97,54 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": 1,
+      "text": "123",
+      "id": "5P81jvM"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "321",
+      "id": "fm_g6OQ"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "",
+      "id": "Jx8_sTI"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "",
+      "id": "SAyxBjt"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "",
+      "id": "_XeiaTw"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "",
+      "id": "Pp3znK-"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "",
+      "id": "c-yvsnB"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "12312312",
+      "id": "miMiRf6"
     }
   ],
   "users": [
@@ -115,14 +163,28 @@
       "avatar": "https://avatars.mds.yandex.net/i?id=3e54935a746b9607d363f1440785d04d7dab9394-7664914-images-thumbs&n=13"
     }
   ],
-  "profile": {
-    "first": "Alex",
-    "lastname": "Vish",
-    "age": 29,
-    "currency": "USD",
-    "country": "Russia",
-    "city": "Moscow",
-    "username": "admin1",
-    "avatar": "https://avatars.mds.yandex.net/i?id=3e54935a746b9607d363f1440785d04d7dab9394-7664914-images-thumbs&n=13"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Alex",
+      "lastname": "Vish",
+      "age": 29,
+      "currency": "USD",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "admin1",
+      "avatar": "https://teknotower.com/wp-content/uploads/2020/11/js.png"
+    },
+    {
+      "id": "2",
+      "first": "Boray2",
+      "lastname": "Make",
+      "age": 31,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "admin2",
+      "avatar": "https://avatars.mds.yandex.net/i?id=3e54935a746b9607d363f1440785d04d7dab9394-7664914-images-thumbs&n=13"
+    }
+  ]
 }
