@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import cls from './ArticleDetailPage.module.scss'
 import { memo, useCallback } from 'react'
 import { ArticleDetails } from 'entities/Article'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { Text } from 'shared/ui/Text/Text'
 import { CommentList } from 'entities/Comment'
 import {
@@ -23,6 +23,8 @@ import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEf
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
 import { AddCommentForm } from 'features/addNewComment'
 import { addCommentForArticles } from '../../model/services/addCommentForArticles/addCommentForArticles'
+import { Button, ButtonTheme } from 'shared/ui/Button/Button'
+import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 
 interface ArticleDetailPageProps {
   className?: string
@@ -34,6 +36,7 @@ const reducers: ReducersList = {
 
 const ArticleDetailPage = (props: ArticleDetailPageProps) => {
   const { t } = useTranslation()
+  const navigate = useNavigate()
   const { className } = props
   const dispatch = useDispatch()
   const { id } = useParams<{ id: string }>()
@@ -47,6 +50,9 @@ const ArticleDetailPage = (props: ArticleDetailPageProps) => {
     },
     [dispatch],
   )
+  const onBackToList = useCallback(() => {
+    navigate(RoutePath.articles)
+  }, [dispatch])
 
   if (!id) {
     return (
@@ -63,6 +69,9 @@ const ArticleDetailPage = (props: ArticleDetailPageProps) => {
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <div className={classNames(cls.ArticleDetailPage, {}, [className])}>
+        <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
+          Назад к списку
+        </Button>
         <ArticleDetails id={id} />
         <Text className={cls.commentTitle} title={t('comments')} />
         <AddCommentForm onSendComment={onSendComment} />
