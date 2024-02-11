@@ -38,5 +38,5 @@ export const DynamicModuleLoader: FC<DynamicModuleLoaderProps> = (props) => {
     }
   }, [])
 
-  return <div>{children}</div>
+  return <>{children}</>
 }

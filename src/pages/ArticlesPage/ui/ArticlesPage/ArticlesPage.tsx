@@ -26,6 +26,7 @@ import {
   getArticlePageIsLoading,
   getArticlePageView,
 } from '../../model/selectors/articlesPageSelectors'
+import { Page } from 'shared/ui/Page/Page'
 
 interface ArticlesPageProps {
   className?: string
@@ -51,15 +52,19 @@ const ArticlesPage = (props: ArticlesPageProps) => {
 
   useInitialEffect(() => {
     dispatch(articlePageActions.initState())
-    dispatch(fetchArticlesList())
+    dispatch(
+      fetchArticlesList({
+        page: 1,
+      }),
+    )
   })
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames(cls.ArticlesPage, {}, [className])}>
+      <Page className={classNames(cls.ArticlesPage, {}, [className])}>
         <ArticleViewSelector view={view} onViewClick={onChangeView} />
         <ArticleList isLoading={isLoading} view={view} articles={articles} />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   )
 }

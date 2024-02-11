@@ -25,6 +25,7 @@ import { ValidateProfileError } from 'entities/Profile/model/types/profile'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { useParams } from 'react-router-dom'
+import { Page } from 'shared/ui/Page/Page'
 
 const reducers: ReducersList = {
   profile: profileReducer,
@@ -114,7 +115,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-      <div>
+      <Page>
         {' '}
         <ProfilePageHeader />
         {validateErrors?.length &&
@@ -139,7 +140,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
           isLoading={loading}
           error={error}
         />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   )
 }

@@ -25,6 +25,7 @@ import { AddCommentForm } from 'features/addNewComment'
 import { addCommentForArticles } from '../../model/services/addCommentForArticles/addCommentForArticles'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { RoutePath } from 'shared/config/routeConfig/routeConfig'
+import { Page } from 'shared/ui/Page/Page'
 
 interface ArticleDetailPageProps {
   className?: string
@@ -56,9 +57,9 @@ const ArticleDetailPage = (props: ArticleDetailPageProps) => {
 
   if (!id) {
     return (
-      <div className={classNames(cls.ArticleDetailPage, {}, [className])}>
+      <Page className={classNames(cls.ArticleDetailPage, {}, [className])}>
         {t('no_article')}
-      </div>
+      </Page>
     )
   }
 
@@ -68,7 +69,7 @@ const ArticleDetailPage = (props: ArticleDetailPageProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-      <div className={classNames(cls.ArticleDetailPage, {}, [className])}>
+      <Page className={classNames(cls.ArticleDetailPage, {}, [className])}>
         <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
           Назад к списку
         </Button>
@@ -76,7 +77,7 @@ const ArticleDetailPage = (props: ArticleDetailPageProps) => {
         <Text className={cls.commentTitle} title={t('comments')} />
         <AddCommentForm onSendComment={onSendComment} />
         <CommentList isLoading={isLoading} comments={comments} />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   )
 }
